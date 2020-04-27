@@ -3,7 +3,6 @@ import math
 import numpy as np
 
 win = pygame.display.set_mode((600,400))
-clock = pygame.time.Clock()
 
 class Ship:
     def __init__(self,win):
@@ -82,7 +81,6 @@ def drawWindow(ship,drops):
 
 drops = []
 flowers = []
-senf = None
 shootloop = 0
 for i in range(6):
     x = i*80 + 80
