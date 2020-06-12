@@ -1,7 +1,6 @@
 import requests
 import json
 import datetime
-import time
 import tkinter as tk
 
 class Weather:
@@ -21,24 +20,29 @@ class Weather:
     def show_data(self):
         response = requests.get(self.url)
         data = json.loads(response.text)
-       # print(data['weather'][0]['description'],datetime.datetime.now())
+        print(data['weather'][0]['description'],datetime.datetime.now())
         return data
     
     def change_info(self):
         time = datetime.datetime.now()
         data = self.show_data()
         var = data['weather'][0]['description']
-        time = datetime.datetime.now()
         self.label.configure(text=var)
         self.label2.configure(text=time) 
         self.label.after(60000,self.change_info)
         self.label2.after(60000,self.change_info)
         
 
-    #def main(self):
-       # after(60000,cgange_info)
+#if __name__ == '__main__':
+#    root = tk.Tk()
+#    weather = Weather(root)
+#    root.mainloop()
 
-if __name__ ==  "__main__":
-    root = tk.Tk()
-    weather = Weather(root)
-    root.mainloop()
+run = True
+while run:
+    try:
+        root = tk.Tk()
+        weather = Weather(root)
+        root.mainloop()
+    except KeyboardInterrupt:
+        run = False
