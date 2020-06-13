@@ -45,7 +45,7 @@ while cap.isOpened():
             for barcode in d:
                 x,y,w,h = barcode.rect
                 cv2.rectangle(frame,(x,y),(x+w,y+h),(0,0,255),2)
-                barcodeData = barcode.data.decode('ascii')
+                barcodeData = barcode.data.decode('utf-8')
                 barcodeType = barcode.type
                 text = f"{barcodeData} ({barcodeType})"
                 frame = cv2.putText(frame,barcodeData,(x,y-10),font,.5,(0,0,255),2,cv2.LINE_AA)
