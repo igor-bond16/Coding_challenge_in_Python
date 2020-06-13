@@ -6,7 +6,7 @@ from PIL import Image
 import cv2
 
 #b = pyqrcode.QRCode('https://www.youtube.com/channel/UCDYbu9aViDvkubFcwgbbKDA',error='M')
-#a = pyqrcode.create(url="https://www.youtube.com/channel/UCDYbu9aViDvkubFcwgbbKDA",error='H')
+#a = pyqrcode.create(content="Hello From Jetsonnano",error='H')
 #a.png(file='test.png',scale=6)
 
 #b.png('uca.png',scale=6)
