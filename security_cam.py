@@ -3,7 +3,7 @@ from datetime import datetime
 import requests
 import time
 
-token = 'FfrSU27lekXbl7OrNLJNOJ4KKRxmgPCEPhNjK3Ke5Zs'
+token = 'Your Token'
 
 cap = cv2.VideoCapture(0)
 lastframe = None
